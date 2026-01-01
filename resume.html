@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Forester - Executive Resume</title>
+    <!-- Google Fonts: Lato and Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&family=Raleway:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+    <div class="resume-paper" id="resume">
+        <div class="last-updated">Last Updated: <span id="current-date"></span></div>
+
+        <header>
+            <div class="name">
+                <h1 id="full-name"></h1>
+            </div>
+            <div class="summary" id="executive-summary"></div>
+            <div class="contact-info" id="contact-info"></div>
+        </header>
+
+        <main class="resume-body">
+            <!-- Left Column: Main Experience -->
+            <div class="main-column">
+                <section>
+                    <h2>Strategic Leadership & Global Scale</h2>
+                    <div id="leadership-summary">
+                        <!-- Custom section for summary items if needed -->
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Professional Experience</h2>
+                    <div id="experience-list"></div>
+                </section>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <section>
+                    <h2>Cloud AI Credentials</h2>
+                    <div id="cloud-credentials"></div>
+                </section>
+
+                <section>
+                    <h2>Strategic Expertise</h2>
+                    <div id="strategic-expertise"></div>
+                </section>
+
+                <section>
+                    <h2>Elite Selection</h2>
+                    <div id="elite-selection"></div>
+                </section>
+
+                <section>
+                    <h2>Academic Pedigree</h2>
+                    <div id="academic-pedigree"></div>
+                </section>
+            </aside>
+        </main>
+    </div>
+
+    <!-- UI Helpers (Hidden in Print) -->
+    <div class="no-print" style="position: fixed; bottom: 20px; right: 20px; display: flex; gap: 10px;">
+        <button onclick="window.print()"
+            style="padding: 12px 24px; background: #2b2b2b; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: sans-serif; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">Print
+            to PDF</button>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
