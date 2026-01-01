@@ -1,6 +1,6 @@
 # Sean Forester - Professional Portfolio
 
-This repository contains the source code for my professional portfolio website, showcasing my expertise in Strategic AI Transformation, Multi-Agent Orchestration, and Executive Leadership.
+This repository contains the source code for my professional portfolio website, showcasing my expertise in Strategic AI Transformation, Technical Innovation, and Executive Leadership.
 
 ## Features
 - **Modern Glassmorphism Design**: High-end aesthetic with dynamic CSS gradients.
