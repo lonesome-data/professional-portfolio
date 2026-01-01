@@ -10,5 +10,12 @@ This repository contains the source code for my professional portfolio website, 
 - **Mobile Responsive**: Fully optimized for various screen sizes.
 - **Integrated Analytics**: Google Analytics tracking for professional engagement.
 
+## Resume Management
+The file `resume.html` in this repository is **automatically generated**.
+
+- **Source:** Managed privately in the `resume_creator` repository.
+- **Warning:** Do not edit `resume.html` directly in this repo. Any changes will be overwritten by the automated sync from the private creator repo.
+- **Update Process:** To change the resume, update the private repo and push to its `main` branch.
+
 ## License
 Created and maintained by Sean Forester. Some assets subject to original licensing as noted in LICENSE.txt.
