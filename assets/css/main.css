@@ -409,11 +409,11 @@ details[open]#timeline {
 .timeline-marker-h {
     width: 16px;
     height: 16px;
-    background: #fff;
+    background: transparent;
     border-radius: 50%;
     margin-bottom: 3.5rem;
-    border: 3px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    border: none;
+    box-shadow: none;
     position: relative;
     top: -7px;
 }
@@ -421,8 +421,8 @@ details[open]#timeline {
 .timeline-icon-box {
     position: absolute;
     top: -2.5rem;
-    width: 45px;
-    height: 45px;
+    width: 56px;
+    height: 56px;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
