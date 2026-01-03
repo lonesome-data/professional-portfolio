@@ -1,6 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 @import url("font-awesome.min.css");
 
+/* Philosophy Section Styles */
+.philosophy-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.philosophy-card {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    border-left: 4px solid #0366d6;
+    background-color: #f6f8fa;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.philosophy-title {
+    font-weight: bold;
+    color: #24292e;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.philosophy-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #586069;
+    text-align: left;
+}
+
+.philosophy-section-title {
+    margin-top: 3rem;
+    color: var(--color-text);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.philosophy-intro {
+    color: var(--color-text-muted);
+    margin-top: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 :root {
     --font-primary: 'Inter', sans-serif;
     --color-text: #ffffff;
