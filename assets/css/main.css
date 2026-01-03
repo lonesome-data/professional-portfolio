@@ -14,6 +14,12 @@
     --content-height: auto;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 /* Reset */
 html,
 body,
@@ -132,9 +138,11 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /* Main scroll handled by wrapper if needed */
+    align-items: flex-start;
+    /* Changed from center to prevent clipping content */
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Ensure vertical scrolling is possible */
 }
 
 @keyframes gradientBG {
@@ -192,6 +200,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+    /* Extra safety for horizontal bleed */
 }
 
 #header {
@@ -237,7 +247,8 @@ details {
     padding: 1rem;
     margin: 1rem auto;
     max-width: 600px;
-    width: 100%;
+    width: calc(100% - 2rem);
+    /* Ensure margins are respected on mobile */
     box-shadow: var(--glass-shadow);
     transition: all 0.4s ease;
 }
@@ -574,7 +585,14 @@ nav a:hover {
     }
 
     details {
-        max-width: 90%;
+        max-width: 100%;
+        width: 100%;
+        /* Use full width available within padding */
+    }
+
+    #main {
+        padding: 1rem 0.5rem;
+        /* Tighter padding on mobile */
     }
 
     nav ul {
