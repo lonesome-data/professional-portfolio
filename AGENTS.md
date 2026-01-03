@@ -1,74 +1,88 @@
-# Execution Plan: Repository Decoupling & Manual Baseline Establishment
+# Portfolio Update Instructions: The "Delivery Architect" Pivot
 
-## Goal
-To logically and technically sever the automatic synchronization between the **Private/Curation** environment and the **Public/Professional Portfolio**, ensuring a stable, manually-managed baseline for public viewing.
+## Objective
+Update the professional portfolio at `lonesome-data.github.io` to shift the narrative from a General Management/GTM focus to a **Technical Delivery & Systems Architecture** focus. The goal is to highlight the user's "Subjective" leadership style, deterministic modeling philosophy, and the transition from the Marine Corps to high-level engineering.
 
----
+## 1. Source File
+- **Target File:** `index.md` (or the primary Markdown file for the site landing page).
 
-## Repository Reference
-* **Public Repository:** `https://github.com/lonesome-data/professional-portfolio.git`
-* **Private Repository:** `https://github.com/lonesome-data/resume_creator.git`
+## 2. Header Update (Professional Summary)
+Ensure the top-level summary is exactly as follows:
 
----
+> **Strategic AI Transformation Leader & Enterprise AI Strategist**
+> Technical Executive and delivery architect specializing in the transition of complex R&D into production-ready AI systems. I lead 'manager of manager' structures to scale global delivery capabilities, prioritizing deterministic modeling and systemic reliability over non-deterministic inferencing. Leveraging a background in U.S. Marine Corps command and an MS in Computer Science, I architect resilient AI engines for highly regulated and high-velocity commercial sectors alike.
 
-## Phase 1: Severing the Sync Logic
-**Objective:** Identify and dismantle the bridge so that a push to the private side no longer triggers an update on the public side.
-
-### 1.1 Audit Git Hooks
-Local hooks often automate cross-repo transfers.
-
-* **Action:** Navigate to the private repository root: `cd resume_creator`
-* **Action:** List all active hooks: `ls .git/hooks/`
-* **Target:** Inspect `pre-push`, `post-commit`, or `post-receive` for any `git push` commands targeting the public repository URL.
-* **Remedy:** Rename the file (e.g., `mv .git/hooks/pre-push .git/hooks/pre-push.bak`) or comment out the specific push lines.
-
-### 1.2 Review Remote Configurations
-* **Action:** Run `git remote -v` inside `resume_creator`
-* **Check:** Look for remotes named `public`, `portfolio`, `upstream`, or secondary push URLs under `origin` that point to the `professional-portfolio` URL.
-* **Command:** If a dedicated public remote exists: `git remote remove [REMOTE_NAME]`
-* **Command:** If `origin` has multiple push URLs, reset it to only point to private: `git remote set-url --push origin https://github.com/lonesome-data/resume_creator.git`
-
-### 1.3 Audit CI/CD & Cloud Automation
-* **Action:** In the `resume_creator` repo, check for `.github/workflows/`
-* **Check:** Search YAML files for keywords: `professional-portfolio`, `remote add`, or secrets like `PORTFOLIO_DEPLOY_KEY`.
-* **Remedy:** Delete the YAML file responsible for syncing or disable the workflow in the GitHub Actions UI.
-* **Action:** Check **Settings > Webhooks** on GitHub for the `resume_creator` repository. Delete any webhook pointing to deployment services linked to the portfolio site.
+## 3. New Content Injection (About & Philosophy)
+Paste the following block immediately **AFTER** the Professional Summary and **BEFORE** the "Strategic & Tech Expertise" section.
 
 ---
 
-## Phase 2: Establishing the Public Baseline
-**Objective:** Initialize the public repository with a permanent, self-contained version of the resume.
+## Marine Corps to Code: A Journey in Systems
 
-### 2.1 Sanitize `resume.html`
-* **Action:** Navigate to the public repository: `cd professional-portfolio`
-* **Task:** Open `resume.html` and verify all assets.
-* **Requirement:** Ensure all `<link>`, `<script>`, and `<img>` tags point to local files within `professional-portfolio` or valid CDNs. No paths should reference `../resume_creator/`.
-* **Validation:** Open `resume.html` in a clean browser environment to ensure it renders without 404 errors.
+My career began in the **U.S. Marine Corps**, where I learned that high-stakes missions succeed or fail based on the reliability of the underlying system. Transitioning from the field to the classroom as a Faculty member at the **U.S. Naval Academy**, I realized my true passion lay in the architecture, the logic, and the deterministic variables that drive mission readiness. With an **MS in Computer Science**, I don’t just manage technical teams; I cultivate an engineering culture where precision is the baseline and "working backwards" from a problem is the standard.
 
-### 2.2 The Source of Truth Commit
-* **Action:** Stage and commit the finalized file in the `professional-portfolio` repo.
-* **Command:** ```bash
-    git add resume.html
-    git commit -m "docs: establish standalone resume.html (sync disabled)"
-    git push origin main
-    ```
+I am a **technical realist**. In an era of rapid AI experimentation, I focus on the intersection of agentic velocity and predictive accuracy. My approach is driven by a fundamental data science conviction: while agentic workflows are transformative for optimizing administrative and low-order tasks, true mission outcomes—readiness, risk, and efficiency—are achieved through rigorous, **deterministic modeling**. I thrive in autonomous, expert-driven environments where I can lead specialized technical cohorts in building stable, audit-ready solutions.
+
+<style>
+  .philosophy-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .philosophy-card {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    border-left: 4px solid #0366d6;
+    background-color: #f6f8fa;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .philosophy-title {
+    font-weight: bold;
+    color: #24292e;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+  .philosophy-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #586069;
+  }
+</style>
+
+<div class="philosophy-container">
+
+  <div class="philosophy-card">
+    <div class="philosophy-title">Expert-Driven Leadership</div>
+    <div class="philosophy-text">
+      As an expert-driven leader, I provide the highest value through technical authority and autonomous problem-solving rather than bureaucratic management. I thrive in "manager of manager" structures.
+    </div>
+  </div>
+
+  <div class="philosophy-card">
+    <div class="philosophy-title">Systemic Integrity</div>
+    <div class="philosophy-text">
+      I prioritize depth over breadth, leveraging high Foresight to architect systems that are economically sound and architecturally resilient over long-term horizons.
+    </div>
+  </div>
+
+  <div class="philosophy-card">
+    <div class="philosophy-title">Deterministic Focus</div>
+    <div class="philosophy-text">
+      I favor "slowness and precision" in engineering, ensuring that agentic speed never compromises the deterministic accuracy required in highly regulated sectors.
+    </div>
+  </div>
+
+</div>
+
+<br>
 
 ---
 
-## Phase 3: Updating Documentation
-**Objective:** Prevent accidental re-coupling by documenting the manual boundary.
-
-### 3.1 Public `README.md` Update
-* **Action:** Edit `README.md` in `professional-portfolio`. Append to the **Maintenance** section:
-    > "Maintenance Note: The resume.html file is a static baseline. It is manually curated and is not automatically updated by the resume_creator repository. To update the public resume, changes must be manually ported and committed here."
-
-### 3.2 Private `README.md` Update
-* **Action:** Edit `README.md` in `resume_creator`. Append to the **Workflow** section:
-    > "Workflow Note: This repository is for private curation and temporal tracking only. Automatic synchronization to professional-portfolio has been disabled. Approved versions must be manually exported to the professional repository."
-
----
-
-## Success Criteria (Verification for Agent)
-1.  **Verification 1:** Run a dummy commit in `resume_creator`: `git commit --allow-empty -m "test sync" && git push`
-2.  **Verification 2:** Check `professional-portfolio` logs: `cd professional-portfolio && git fetch && git log origin/main`. Ensure no new commits appeared from the private push.
-3.  **Verification 3:** Confirm both `README.md` files contain the string "manually ported".
+## 4. Operational Constraints
+- **Responsive Design:** Maintain the `philosophy-container` flexbox properties to ensure the cards stack correctly on mobile devices.
+- **Visual Consistency:** Ensure the `#f6f8fa` background color and blue border-left align with the existing GitHub/minimalist aesthetic.
+- **Clean Markdown:** Do not introduce extra `#` headers that might break the existing Table of Contents or site navigation.
