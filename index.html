@@ -36,9 +36,14 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+    <div class="glow-container">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
     <div id="wrapper">
         <div id="main" class="gradient">
 
@@ -62,7 +67,7 @@
                 </details>
 
                 <details id="philosophy">
-                    <summary class="toggle-section">Marine Corps to Code: A Journey in Systems</summary>
+                    <summary class="toggle-section">Marine Corps to Machine Learning: A Journey in Systems</summary>
                     <div class="philosophy-intro">
                         <p>
                             My career began in the <strong>U.S. Marine Corps</strong>, where I learned that high-stakes
@@ -86,35 +91,6 @@
                             building stable, audit-ready solutions.
                         </p>
 
-                        <div class="philosophy-container">
-                            <div class="philosophy-card">
-                                <div class="philosophy-title">Expert-Driven Leadership</div>
-                                <div class="philosophy-text">
-                                    As an expert-driven leader, I provide the highest value through technical authority
-                                    and autonomous
-                                    problem-solving rather than bureaucratic management. I thrive in "manager of
-                                    manager" structures.
-                                </div>
-                            </div>
-
-                            <div class="philosophy-card">
-                                <div class="philosophy-title">Systemic Integrity</div>
-                                <div class="philosophy-text">
-                                    I prioritize depth over breadth, leveraging high Foresight to architect systems that
-                                    are economically
-                                    sound and architecturally resilient over long-term horizons.
-                                </div>
-                            </div>
-
-                            <div class="philosophy-card">
-                                <div class="philosophy-title">Deterministic Focus</div>
-                                <div class="philosophy-text">
-                                    I favor "slowness and precision" in engineering, ensuring that agentic speed never
-                                    compromises the
-                                    deterministic accuracy required in highly regulated sectors.
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </details>
 
@@ -140,6 +116,39 @@
                                 <li>AI Safety & Ethics Frameworks</li>
                                 <li>Predictive Analytics & Data Science</li>
                             </ul>
+                        </div>
+                    </div>
+                </details>
+
+                <details id="aptitudes">
+                    <summary class="toggle-section">Technical Executive DNA: Cognitive & Leadership Profile</summary>
+                    <div class="aptitude-radar">
+                        <canvas id="aptitudeChart"></canvas>
+                    </div>
+                    <div class="philosophy-container">
+                        <div class="philosophy-card">
+                            <div class="philosophy-title">Expert-Driven Leadership</div>
+                            <div class="philosophy-text">
+                                As an expert-driven leader, I provide the highest value through technical authority
+                                and autonomous problem-solving rather than bureaucratic management. I thrive in
+                                "manager of manager" structures.
+                            </div>
+                        </div>
+
+                        <div class="philosophy-card">
+                            <div class="philosophy-title">Systemic Integrity</div>
+                            <div class="philosophy-text">
+                                I prioritize depth over breadth, leveraging high Foresight to architect systems that are
+                                economically sound and architecturally resilient over long-term horizons.
+                            </div>
+                        </div>
+
+                        <div class="philosophy-card">
+                            <div class="philosophy-title">Deterministic Focus</div>
+                            <div class="philosophy-text">
+                                I favor "slowness and precision" in engineering, ensuring that agentic speed never
+                                compromises the deterministic accuracy required in highly regulated sectors.
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -277,19 +286,27 @@
                     <div>
                         <h3>Technical Certifications</h3>
                         <div class="credly-badge-container">
-                            <div data-iframe-width="150" data-iframe-height="270"
+                            <div data-iframe-width="150" data-iframe-height="350"
                                 data-share-badge-id="8ff21e02-2cc6-4651-8f33-330907f7804d"
                                 data-share-badge-host="https://www.credly.com"></div>
-                            <div data-iframe-width="150" data-iframe-height="270"
+                            <script type="text/javascript" async
+                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+                            <div data-iframe-width="150" data-iframe-height="350"
                                 data-share-badge-id="c967e523-4393-4e2e-9d19-ebed3e44ea8f"
                                 data-share-badge-host="https://www.credly.com"></div>
-                            <div data-iframe-width="150" data-iframe-height="270"
+                            <script type="text/javascript" async
+                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+                            <div data-iframe-width="150" data-iframe-height="350"
                                 data-share-badge-id="af489289-8fbe-49a5-a8f6-445dfabd9428"
                                 data-share-badge-host="https://www.credly.com"></div>
-                            <div data-iframe-width="150" data-iframe-height="270"
+                            <script type="text/javascript" async
+                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+                            <div data-iframe-width="150" data-iframe-height="350"
                                 data-share-badge-id="ba7bd5ab-4d86-4ce9-8dd6-71a14cebcefb"
                                 data-share-badge-host="https://www.credly.com"></div>
-                            <div data-iframe-width="150" data-iframe-height="270"
+                            <script type="text/javascript" async
+                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+                            <div data-iframe-width="150" data-iframe-height="350"
                                 data-share-badge-id="95cc6da0-6b17-45e2-8d91-18709b3b2598"
                                 data-share-badge-host="https://www.credly.com"></div>
                             <script type="text/javascript" async
@@ -338,6 +355,64 @@
                     document.getElementById("year").innerText = new Date().getFullYear();
                 </script>
                 <script type="text/javascript" src="./assets/js/main.js"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const ctx = document.getElementById('aptitudeChart').getContext('2d');
+
+                        const profileData = {
+                            "Ideaphoria": 15,
+                            "Graphoria": 25,
+                            "Observation": 45,
+                            "Inductive Reasoning": 50,
+                            "Memory for Design": 55,
+                            "Rhythm Memory": 60,
+                            "Structural Visualization": 60,
+                            "Pitch Discrimination": 65,
+                            "Silograms": 65,
+                            "Analytical Reasoning": 70,
+                            "Foresight": 80,
+                            "Number Memory": 85
+                        };
+
+                        new Chart(ctx, {
+                            type: 'radar',
+                            data: {
+                                labels: Object.entries(profileData).map(([name, value]) => [name, `${value}%`]),
+                                datasets: [{
+                                    label: 'Cognitive Profile',
+                                    data: Object.values(profileData),
+                                    backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                                    borderColor: '#6366f1',
+                                    pointBackgroundColor: '#22d3ee',
+                                    pointBorderColor: '#fff',
+                                    borderWidth: 2
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    r: {
+                                        angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                                        pointLabels: {
+                                            color: '#9ca3af',
+                                            font: { family: "'Inter', sans-serif", size: 11 },
+                                            centerPointLabels: true,
+                                            textAlign: 'center'
+                                        },
+                                        ticks: { display: false, stepSize: 20 },
+                                        suggestedMin: 0,
+                                        suggestedMax: 100
+                                    }
+                                },
+                                plugins: {
+                                    legend: { display: false }
+                                },
+                                responsive: true,
+                                maintainAspectRatio: false
+                            }
+                        });
+                    });
+                </script>
             </div>
 
         </div>
