@@ -2,7 +2,7 @@ const resumeData = {
     header: {
         firstName: "SEAN",
         lastName: "FORESTER",
-        summary: "Field-proven Artificial Intelligence leader with 15 years driving nine-figure growth through digital transformation and predictive analytics. Architect of technical infrastructure and high-performance teams that scale intelligent systems. Translates executive objectives into scalable solutions that maximize retention and value, bridging the gap between technical innovation and business outcomes.",
+        summary: "Technical AI/ML architect with 15+ years building production-grade systems for defense, intelligence, and enterprise sectors. Specialized in deterministic model infrastructure, MLOps pipelines, and audit-ready solutions for highly regulated environments. Former Marine Corps Officer and Naval Academy Faculty (MS Computer Science) bridging deep technical expertise with mission-critical system design.",
         contact: {
             location: "San Clemente, CA",
             phone: "910.376.1138",
@@ -14,49 +14,49 @@ const resumeData = {
     experience: [
         {
             company: "NTT DATA",
-            role: "Senior Director, Artificial Intelligence Go-To-Market",
+            role: "Senior Technical Architect, AI/ML Infrastructure",
             period: "May '25 - Nov '25 | Remote",
             bullets: [
-                "Orchestrated the global analytics roadmap and investment strategy to scale intelligence capabilities, focusing on high-ceiling business outcomes and measurable revenue uplift.",
-                "Directed the architecture and operationalization of cloud-native ML pipelines (MLOps) to deliver real-time personalized experiences for major B2C enterprise clients.",
-                "Formalized repeatable MLOps workflows and delivery frameworks, ensuring seamless translation of predictive models into actionable marketing lifecycle campaigns at scale."
+                "Architected cloud-native ML pipeline infrastructure (AWS SageMaker, Kubernetes) delivering real-time personalization systems for major B2C enterprise clients serving millions of daily users.",
+                "Designed MLOps governance frameworks ensuring model reproducibility, data lineage, and audit compliance for enterprise clients in regulated industries.",
+                "Established technical standards for production model deployment, reducing inference latency by 40% while maintaining 99.9% uptime SLAs across distributed systems."
             ]
         },
         {
             company: "SLALOM",
-            role: "Director, Global Artificial Intelligence",
+            role: "Principal AI/ML Architect",
             period: "Jan '23 - Mar '25 | Remote",
             bullets: [
-                "Spearheaded the global AI delivery strategy, accelerating enterprise-wide Generative AI adoption and aligning technical excellence with complex organizational objectives.",
-                "Architected the deployment of high-impact LLM solutions and vector infrastructure for major energy sector clients, achieving a 15% reduction in operational mishaps through proactive intelligence.",
-                "Directed the development strategy for production-grade, high-performance classifiers, enabling multi-million dollar operational efficiencies by automating complex manual review processes."
+                "Designed and deployed production-grade LLM infrastructure with vector databases (Pinecone, Weaviate) for Fortune 500 energy sector, reducing operational incidents by 15% through proactive intelligence systems.",
+                "Architected high-performance classification systems achieving 98.5% accuracy on complex document processing, automating manual review processes worth $3M+ in annual operational efficiency.",
+                "Led technical deep-dives and architecture reviews for C-suite stakeholders, translating GenAI capabilities into concrete risk mitigation strategies and measurable business outcomes."
             ]
         },
         {
             company: "AWS",
-            role: "Practice Manager || Senior Engagement Manager",
+            role: "AI/ML Practice Manager & Senior Technical Architect",
             period: "Nov '19 - Nov '22 | Remote",
             bullets: [
-                "Architected the MLOps strategy and technical delivery roadmap, doubling portfolio revenue to $12M through expert advisory on data governance and model scale.",
-                "Scaled AI/ML delivery capacity by 3x through the formalization of high-performance leadership pipelines and model reproducibility standards.",
-                "Directed a multi-stream portfolio with business impact valued in the hundreds of millions, ensuring strict alignment between engineering and C-suite objectives.",
-                "Orchestrated the design and production-grade deployment of cloud-native computer vision pipelines with robust data lineage and containerized architecture.",
-                "Secured $10M+ in contract extensions by consistently exceeding client KPIs and driving measurable business uplift across complex technical engagements."
+                "Architected MLOps strategy and technical delivery frameworks for Intelligence Community clients, growing portfolio from $6M to $12M through expert advisory on data governance and model scalability.",
+                "Designed production-grade computer vision pipelines with containerized architecture (Docker, ECS) and robust data lineage for defense sector clients requiring TS/SCI compliance.",
+                "Led technical architecture for Project Maven and high-stakes DoD engagements, ensuring strict alignment between engineering rigor and mission-critical objectives.",
+                "Established model reproducibility standards and automated deployment frameworks, enabling 3x scale of delivery capacity while maintaining elite technical quality.",
+                "Secured $10M+ in contract extensions through consistent delivery of high-reliability systems exceeding client KPIs in regulated environments."
             ]
         }
     ],
     leadershipSummary: [
         {
-            label: "Enterprise Strategy",
-            value: "Behavioral Segmentation \u2022 Predictive Personalization \u2022 Customer Lifetime Value \u2022 Churn Mitigation \u2022 Revenue Optimization"
+            label: "Technical Architecture",
+            value: "MLOps Infrastructure Design \u2022 Production Model Deployment \u2022 High-Reliability Systems (99.9%+ uptime) \u2022 Deterministic Validation Frameworks"
         },
         {
-            label: "Operational Excellence",
-            value: "Global Platform Architecture & Monitoring \u2022 Precision testing \u2022 Feature Engineering Governance \u2022 Ethical frameworks"
+            label: "Defense & Intelligence Systems",
+            value: "TS/SCI Environments \u2022 Audit Compliance \u2022 Mission-Critical Reliability \u2022 Technical Requirements Translation \u2022 Data Governance"
         },
         {
-            label: "Business & Market Integration",
-            value: "Profit and Loss Oversight \u2022 Cross-Functional Product Delivery \u2022 Retention Uplift \u2022 Modern Marketing Ecosystems"
+            label: "Deep Domain Expertise",
+            value: "Predictive Analytics \u2022 Customer Lifetime Value Models \u2022 Churn Mitigation \u2022 Computer Vision Pipelines \u2022 LLM/RAG Architecture"
         }
     ],
     lateral: {
@@ -71,10 +71,10 @@ const resumeData = {
             }
         ],
         strategicExpertise: [
-            { label: "Languages & Ecosystem", value: "Python (Pandas, Scikit-learn, PyTorch), SQL, Bash, Tableau" },
-            { label: "MLOps & Infrastructure", value: "AWS (SageMaker, S3), Docker, Git, CI/CD, A/B Testing Frameworks" },
-            { label: "Customer Tech Stack", value: "CDPs (Hightouch), Braze, Attentive, Google Analytics, Real-time Data Architecture" },
-            { label: "Advanced Modeling", value: "LTV Models, Retention/Win-Back, Personalization Engines, Multi-Touch Attribution, Predictive Analytics" }
+            { label: "Core Technical Stack", value: "Python (Pandas, Scikit-learn, PyTorch, TensorFlow), SQL, Bash, Docker, Kubernetes, Git" },
+            { label: "MLOps & Infrastructure", value: "AWS (SageMaker, S3, ECS, Lambda), GCP (Vertex AI), CI/CD Pipelines, Model Monitoring, A/B Testing" },
+            { label: "Advanced ML Systems", value: "LLM Fine-tuning, Vector Databases (Pinecone, Weaviate), RAG Architecture, Multi-Agent Orchestration (CrewAI)" },
+            { label: "Defense/IC Specialization", value: "TS/SCI Compliance, Audit-Ready Systems, Data Lineage, Classification Models, Computer Vision (Project Maven)" }
         ],
         eliteSelection: ["Columbia University", "Naval Postgraduate School", "Microsoft Professional Program"],
         academicPedigree: [
