@@ -5,10 +5,22 @@
 This repository contains the source code for my professional portfolio website, showcasing my expertise in Strategic AI Transformation, Technical Innovation, and Executive Leadership.
 
 ## Features
-- **Modern Glassmorphism Design**: High-end aesthetic with dynamic CSS gradients.
-- **Strategic & Technical Breakdown**: Clear delineation between executive leadership and deep-tech innovation.
-- **Mobile Responsive**: Fully optimized for various screen sizes.
-- **Integrated Analytics**: Google Analytics tracking for professional engagement.
+- **Technical Specialist Positioning**: Emphasis on deep systems expertise over strategic leadership
+- **Defense/IC Credibility**: Highlighting TS/SCI eligibility and mission-critical system experience
+- **Modern Glassmorphism Design**: High-end aesthetic with dynamic CSS gradients
+- **Aptitude-Aligned Messaging**: Clear delineation of ideal technical engagement model
+- **Mobile Responsive**: Fully optimized for various screen sizes
+- **Integrated Analytics**: Google Analytics tracking for professional engagement
+
+## Positioning
+This portfolio represents Sean Forester's expertise as a **Technical AI/ML Architect** specializing in:
+- Production MLOps infrastructure for mission-critical systems
+- Defense and Intelligence Community (TS/SCI) environments
+- Deterministic model design with audit compliance
+- Long-term system architecture (3-5 year planning horizons)
+- Autonomous technical specialist work (not people management)
+
+**Career Focus**: Deep technical architecture roles requiring analytical rigor and strategic foresight, not go-to-market coordination or administrative management.
 
 ## Resume Management
 The file `resume.html` in this repository is a static baseline.
