@@ -1,422 +1,294 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135025325-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-135025325-1');
-    </script>
-
-    <title>Sean Forester | Strategic AI Transformation Leader</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description"
-        content='Strategic AI Transformation Leader & Executive Advisor. 12+ years of high-stakes AI/ML leadership and technical innovation.'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sean Forester — Enterprise AI Leader</title>
+    <meta name="description" content="I build AI systems that work in the real world — not just in notebooks. Strategy to production at scale.">
+    <meta property="og:title" content="Sean Forester — Enterprise AI Leader">
+    <meta property="og:description" content="I build AI systems that work in the real world — not just in notebooks. Strategy to production at scale.">
     <meta property="og:type" content="website">
-    <meta property="og:image"
-        content="https://github.com/lonesome-data/lonesome-data.github.io/blob/master/assets/images/preview-lonesome-data.github.io.png">
-    <meta name="google-site-verification" content="mP6LODLZKOv-g3-o4u9GFvXRx89HUDxku34jBAKWYyE" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sean Forester | Strategic AI Transformation Leader">
-    <meta name="twitter:description"
-        content="Strategic AI Transformation Leader & Executive Advisor. 12+ years of high-stakes AI/ML leadership and technical innovation.">
-    <meta name="twitter:image"
-        content="https://github.com/lonesome-data/lonesome-data.github.io/blob/master/assets/images/preview-lonesome-data.github.io.png">
-    <link rel="icon" type="image/svg+xml" href="./assets/usna.svg">
+    <meta property="og:url" content="https://lonesome-data.github.io/professional-portfolio/">
+    <meta name="google-site-verification" content="mP6LODLZKOv-g3-o4u9GFvXRx89HUDxku34jBAKWYyE">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --slate: #2d3748;
+            --slate-light: #4a5568;
+            --amber: #d69e2e;
+            --amber-light: #ecc94b;
+            --blue-muted: #4a6fa5;
+            --blue-light: #ebf0f7;
+            --sand: #faf8f5;
+            --white: #ffffff;
+            --text: #1a202c;
+            --text-secondary: #4a5568;
+            --border: #e2e8f0;
+        }
+
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--sand);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 5rem 0 3rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: var(--slate);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .headline {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--blue-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .hero .hook {
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Section */
+        section {
+            padding: 2.5rem 0;
+        }
+
+        section h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--slate);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        /* What I Do */
+        .bridge p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--slate);
+            margin-bottom: 0.5rem;
+        }
+
+        .card .context {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .card .result {
+            font-size: 0.85rem;
+            color: var(--text);
+            font-weight: 500;
+            line-height: 1.5;
+            border-top: 1px solid var(--border);
+            padding-top: 0.75rem;
+        }
+
+        .card .result strong {
+            color: var(--amber);
+        }
+
+        /* Certs */
+        .certs-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .cert {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            color: var(--slate);
+            font-weight: 400;
+        }
+
+        .cert .year {
+            color: var(--blue-muted);
+            font-weight: 500;
+        }
+
+        .cert.expired {
+            opacity: 0.55;
+        }
+
+        .cert.expired .year {
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: var(--blue-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: color 0.15s;
+        }
+
+        .footer-links a:hover {
+            color: var(--amber);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero { padding: 3rem 0 2rem; }
+            .hero h1 { font-size: 1.75rem; }
+            .cards { grid-template-columns: 1fr; }
+            .footer-links { flex-direction: column; align-items: center; gap: 0.75rem; }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="glow-container">
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-    </div>
-    <div id="wrapper">
-        <div id="main" class="gradient">
 
-            <header id="header">
+<div class="container">
 
-                <h1 class="soft-shadow">Sean Forester</h1>
+    <!-- Hero -->
+    <header class="hero">
+        <h1>Sean Forester</h1>
+        <p class="headline">Enterprise AI Leader · Strategy to Production at Scale</p>
+        <p class="hook">"I build AI systems that work in the real world — not just in notebooks."</p>
+    </header>
 
-                <details id="about">
-                    <summary class="toggle-section">Professional Summary</summary>
-                    <div>
-                        <h2>Strategic AI Transformation Leader & Enterprise AI Strategist</h2>
-                        <p>
-                            Technical Executive and delivery architect specializing in the transition of complex R&D
-                            into production-ready AI systems. I lead 'manager of manager' structures to scale global
-                            delivery capabilities, prioritizing deterministic modeling and systemic reliability over
-                            non-deterministic inferencing. Leveraging a background in U.S. Marine Corps command and
-                            an MS in Computer Science, I architect resilient AI engines for highly regulated and
-                            high-velocity commercial sectors alike.
-                        </p>
-                    </div>
-                </details>
+    <!-- What I Do -->
+    <section class="bridge">
+        <h2>What I Do</h2>
+        <p>I'm not a pure technologist who needs a business translator, and I'm not a GTM leader who needs an architect to backfill the technical strategy. I do both. I run technical discovery, design the architecture, build the TCO model, and present to the C-suite — then I stay through delivery.</p>
+    </section>
 
-                <details id="philosophy">
-                    <summary class="toggle-section">Marine Corps to Machine Learning: A Journey in Systems</summary>
-                    <div class="philosophy-intro">
-                        <p>
-                            My career began in the <strong>U.S. Marine Corps</strong>, where I learned that high-stakes
-                            missions succeed or fail based on the reliability of the underlying system. Transitioning
-                            from the field to the classroom as a Faculty member at the <strong>U.S. Naval
-                                Academy</strong>,
-                            I realized my true passion lay in the architecture, the logic, and the deterministic
-                            variables
-                            that drive mission readiness. With an <strong>MS in Computer Science</strong>, I don’t just
-                            manage technical teams; I cultivate an engineering culture where precision is the baseline
-                            and "working backwards" from a problem is the standard.
-                        </p>
-                        <p style="margin-top: 1rem;">
-                            I am a <strong>technical realist</strong>. In an era of rapid AI experimentation, I focus on
-                            the intersection of agentic velocity and predictive accuracy. My approach is driven by a
-                            fundamental data science conviction: while agentic workflows are transformative for
-                            optimizing
-                            administrative and low-order tasks, true mission outcomes—readiness, risk, and
-                            efficiency—are achieved through rigorous, <strong>deterministic modeling</strong>. I thrive
-                            in autonomous, expert-driven environments where I can lead specialized technical cohorts in
-                            building stable, audit-ready solutions.
-                        </p>
+    <!-- Selected Work -->
+    <section>
+        <h2>Selected Work</h2>
+        <div class="cards">
 
-                    </div>
-                </details>
+            <div class="card">
+                <h3>Defense AI Program — AWS</h3>
+                <p class="context">AI program across classified sovereign cloud domains.</p>
+                <p class="result">Tripled portfolio from <strong>$6M to $18M</strong>. Sustained 90-day model release cycles. Scaled delivery capacity <strong>5×</strong> (1 team → 5 teams).</p>
+            </div>
 
-                <details id="skills">
-                    <summary class="toggle-section">Strategic & Technical Expertise</summary>
-                    <div class="skills-grid">
-                        <div class="skills-category">
-                            <h3>Strategic Leadership</h3>
-                            <ul>
-                                <li>Enterprise AI Strategy & Governance</li>
-                                <li>Multi-Million Dollar Revenue Growth</li>
-                                <li>Executive Stakeholder Alignment</li>
-                                <li>Strategic Technology Planning & P&L</li>
-                                <li>Amazon "Working Backwards" Methodology</li>
-                            </ul>
-                        </div>
-                        <div class="skills-category">
-                            <h3>Technical Innovation</h3>
-                            <ul>
-                                <li>Multi-Agent Orchestration (CrewAI, Google, OpenAI)</li>
-                                <li>Agentic Workflow Architecture</li>
-                                <li>LLM Systems & RAG Architecture</li>
-                                <li>AI Safety & Ethics Frameworks</li>
-                                <li>Predictive Analytics & Data Science</li>
-                            </ul>
-                        </div>
-                    </div>
-                </details>
+            <div class="card">
+                <h3>Federal Agency Classifier — Slalom</h3>
+                <p class="context">Federal agency drowning in false positive verifications from a manual review process.</p>
+                <p class="result">Deployed XGBoost classifier that reduced false verifications by <strong>90%</strong>.</p>
+            </div>
 
-                <details id="aptitudes">
-                    <summary class="toggle-section">Technical Executive DNA: Cognitive & Leadership Profile</summary>
-                    <div class="aptitude-radar">
-                        <canvas id="aptitudeChart"></canvas>
-                    </div>
-                    <div class="philosophy-container">
-                        <div class="philosophy-card">
-                            <div class="philosophy-title">Expert-Driven Leadership</div>
-                            <div class="philosophy-text">
-                                As an expert-driven leader, I provide the highest value through technical authority
-                                and autonomous problem-solving rather than bureaucratic management. I thrive in
-                                "manager of manager" structures.
-                            </div>
-                        </div>
+            <div class="card">
+                <h3>GenAI Pivot — Slalom / Home Depot</h3>
+                <p class="context">Computer vision engagement that needed to pivot to generative AI mid-sprint.</p>
+                <p class="result">Delivered working GenAI prototype in a <strong>14-day sprint</strong>, exceeding expanded requirements within the original timeline.</p>
+            </div>
 
-                        <div class="philosophy-card">
-                            <div class="philosophy-title">Systemic Integrity</div>
-                            <div class="philosophy-text">
-                                I prioritize depth over breadth, leveraging high Foresight to architect systems that are
-                                economically sound and architecturally resilient over long-term horizons.
-                            </div>
-                        </div>
+            <div class="card">
+                <h3>Incident Clustering — Slalom / Energy</h3>
+                <p class="context">Canada's second-largest energy producer needed to reduce field incidents.</p>
+                <p class="result">LLM-powered incident clustering reduced field mishaps <strong>15%</strong>.</p>
+            </div>
 
-                        <div class="philosophy-card">
-                            <div class="philosophy-title">Deterministic Focus</div>
-                            <div class="philosophy-text">
-                                I favor "slowness and precision" in engineering, ensuring that agentic speed never
-                                compromises the deterministic accuracy required in highly regulated sectors.
-                            </div>
-                        </div>
-                    </div>
-                </details>
+            <div class="card">
+                <h3>AI Practice Build — NTT DATA</h3>
+                <p class="context">Brought in to build AI go-to-market capability for enterprise and public sector.</p>
+                <p class="result">Secured nearly <strong>$2M</strong> across three enterprise AI contracts within six months, including a $1M Texas DIR win. Negotiated edge-AI OEM partnership.</p>
+            </div>
 
-                <details id="timeline">
-                    <summary class="toggle-section">Executive Trajectory</summary>
-                    <div class="timeline-horizontal">
-                        <div class="timeline-horizontal-item">
-                            <div class="timeline-icon-box">
-                                <img src="./assets/usna.svg" alt="USNA Crest"
-                                    style="width: 85%; height: 85%; object-fit: contain;">
-                            </div>
-                            <div class="timeline-marker-h"></div>
-                            <div class="timeline-content-h">
-                                <span class="timeline-date-h">Academia</span>
-                                <h4>U.S. Naval Academy</h4>
-                                <p class="timeline-role">B.S., Ocean Engineering</p>
-                                <p class="timeline-impact">Rigorous leadership and engineering foundation.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-horizontal-item">
-                            <div class="timeline-icon-box">
-                                <img src="./assets/usmc.svg" alt="USMC Eagle Globe Anchor"
-                                    style="width: 80%; height: 80%; object-fit: contain;">
-                            </div>
-                            <div class="timeline-marker-h"></div>
-                            <div class="timeline-content-h">
-                                <span class="timeline-date-h">Foundation</span>
-                                <h4>US Marine Corps</h4>
-                                <p class="timeline-role">Officer & Leader</p>
-                                <p class="timeline-impact">Elite leadership and disciplined execution.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-horizontal-item">
-                            <div class="timeline-icon-box">
-                                <img src="./assets/nps.svg" alt="NPS Logo"
-                                    style="width: 85%; height: 85%; object-fit: contain;">
-                            </div>
-                            <div class="timeline-marker-h"></div>
-                            <div class="timeline-content-h">
-                                <span class="timeline-date-h">2007 &mdash; 2009</span>
-                                <h4>Naval Postgraduate School</h4>
-                                <p class="timeline-role">M.S., Computer Science</p>
-                                <p class="timeline-impact">Advanced technical specialization.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-horizontal-item">
-                            <div class="timeline-icon-box">
-                                <img src="./assets/usna.svg" alt="USNA Crest"
-                                    style="width: 85%; height: 85%; object-fit: contain;">
-                            </div>
-                            <div class="timeline-marker-h"></div>
-                            <div class="timeline-content-h">
-                                <span class="timeline-date-h">2009 &mdash; 2012</span>
-                                <h4>U.S. Naval Academy</h4>
-                                <p class="timeline-role">Faculty</p>
-                                <p class="timeline-impact">Instructed Computer Science and Algorithms courses.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-horizontal-item">
-                            <div class="timeline-icon-box">
-                                <img src="./assets/usmc.svg" alt="USMC Eagle Globe Anchor"
-                                    style="width: 80%; height: 80%; object-fit: contain;">
-                            </div>
-                            <div class="timeline-marker-h"></div>
-                            <div class="timeline-content-h">
-                                <span class="timeline-date-h">2015 &mdash; 2019</span>
-                                <h4>US Marine Corps</h4>
-                                <p class="timeline-role">Operations Director & Lead Analyst</p>
-                                <p class="timeline-impact">Directed audits and predictive data modeling.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-horizontal-item">
-                            <div class="timeline-icon-box">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-                                    alt="AWS Logo" style="width: 85%; height: 85%; object-fit: contain;">
-                            </div>
-                            <div class="timeline-marker-h"></div>
-                            <div class="timeline-content-h">
-                                <span class="timeline-date-h">2019 &mdash; 2022</span>
-                                <h4>Amazon Web Services</h4>
-                                <p class="timeline-role">AI/ML Practice Manager</p>
-                                <p class="timeline-impact">Scaled $12M+ portfolios and production MLOps.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-horizontal-item">
-                            <div class="timeline-icon-box">
-                                <img src="./assets/slalom_icon.svg" alt="Slalom Logo"
-                                    style="width: 85%; height: 85%; object-fit: contain;">
-                            </div>
-                            <div class="timeline-marker-h"></div>
-                            <div class="timeline-content-h">
-                                <span class="timeline-date-h">2023 &mdash; 2025</span>
-                                <h4>Slalom</h4>
-                                <p class="timeline-role">Director, Global AI/ML</p>
-                                <p class="timeline-impact">Spearheaded GenAI Strategy for Fortune 500.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-horizontal-item">
-                            <div class="timeline-icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                    viewBox="0 0 340.16 69.52" style="padding: 5px;">
-                                    <g fill="#fff">
-                                        <path
-                                            d="M45.64,0c-3.32,0-6.59.72-8.9,1.67-2.31-.95-5.58-1.67-8.9-1.67C13.21,0,0,13.84,0,32.82c0,20.7,16.91,36.7,36.74,36.7s36.74-16,36.74-36.7C73.48,13.84,60.27,0,45.64,0h0ZM36.74,11.27c2.82,1.68,6.54,6.54,6.54,12.02,0,4.02-2.65,7.19-6.54,7.19s-6.54-3.16-6.54-7.19c0-5.48,3.72-10.34,6.54-12.02h0ZM36.74,60.48c-15.17,0-27.71-12.2-27.71-27.84,0-14.28,10.31-24.04,18.41-23.68-3.84,3.82-6.16,9.39-6.16,14.79,0,9.27,7.36,15.77,15.47,15.77s15.47-6.5,15.47-15.77c0-5.39-2.33-10.96-6.16-14.79,8.1-.36,18.41,9.39,18.41,23.68,0,15.64-12.55,27.84-27.71,27.84Z" />
-                                        <g>
-                                            <path d="M126.39,15.84v7.56h11.53v28.38h8.16v-28.38h11.53v-7.56h-31.22Z" />
-                                            <path
-                                                d="M260.76,15.84h-20.56v7.62h20.01c2.93,0,4.08,1.34,4.08,4.78v1.27h-16.58c-6.31,0-9.44,3.15-9.44,10.28v1.7c0,7.33,3.25,10.28,9.79,10.28h24.32v-23.62c0-9.05-2.99-12.31-11.62-12.31ZM248.91,44.09c-1.24,0-2.62-.63-2.62-3.71s1.37-3.62,2.62-3.62h15.39v7.34h-15.39Z" />
-                                            <path
-                                                d="M328.54,15.84h-20.55v7.62h20.01c2.94,0,4.08,1.34,4.08,4.78,0,.02,0,.98,0,1.27h-16.59c-6.31,0-9.44,3.15-9.44,10.28v1.7c0,7.33,3.25,10.28,9.79,10.28h24.32v-23.62c0-9.05-2.99-12.31-11.62-12.31ZM316.69,44.09c-1.24,0-2.62-.63-2.62-3.71s1.37-3.62,2.62-3.62h15.39v7.34h-15.39Z" />
-                                            <path d="M160.2,15.84v7.56h11.53v28.38h8.17v-28.38h11.53v-7.56h-31.23Z" />
-                                            <path d="M274.02,15.84v7.56h11.53v28.38h8.17v-28.38h11.53v-7.56h-31.22Z" />
-                                            <path
-                                                d="M235.1,39.18v-10.75c0-9.42-3.65-12.59-11.89-12.59h-21.86v35.93h22.24c8.74,0,11.51-4.34,11.51-12.59ZM226.76,39.34c0,3.44-1.16,4.78-4.1,4.78h-13.15v-20.63h13.15c2.93,0,4.1,1.34,4.1,4.78v11.07Z" />
-                                            <path
-                                                d="M114.87,43.21c-.17-.33-11.08-21.59-12.42-23.68-1.54-2.42-3.41-4.1-7-4.1-3.33,0-7.28,1.48-7.28,9.48v26.87h8.05v-22.41c0-1.61-.1-3.99-.12-4.47-.02-.39,0-.77.2-.88.23-.13.46.08.62.38.16.3,10.27,20.3,12.42,23.68,1.54,2.42,3.41,4.1,7,4.1,3.33,0,7.28-1.48,7.28-9.48V15.83h-8.05v22.41c0,1.61.1,3.99.12,4.47.02.39,0,.77-.2.88-.23.13-.46-.08-.62-.38Z" />
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="timeline-marker-h"></div>
-                            <div class="timeline-content-h">
-                                <span class="timeline-date-h">2025</span>
-                                <h4>NTT DATA</h4>
-                                <p class="timeline-role">Senior Director, AI Strategy</p>
-                                <p class="timeline-impact">Architected global AI Transformation roadmaps.</p>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details id="certificates">
-                    <summary class="toggle-section">Certificates</summary>
-                    <div>
-                        <h3>Technical Certifications</h3>
-                        <div class="credly-badge-container">
-                            <div data-iframe-width="150" data-iframe-height="350"
-                                data-share-badge-id="8ff21e02-2cc6-4651-8f33-330907f7804d"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <script type="text/javascript" async
-                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-                            <div data-iframe-width="150" data-iframe-height="350"
-                                data-share-badge-id="c967e523-4393-4e2e-9d19-ebed3e44ea8f"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <script type="text/javascript" async
-                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-                            <div data-iframe-width="150" data-iframe-height="350"
-                                data-share-badge-id="af489289-8fbe-49a5-a8f6-445dfabd9428"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <script type="text/javascript" async
-                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-                            <div data-iframe-width="150" data-iframe-height="350"
-                                data-share-badge-id="ba7bd5ab-4d86-4ce9-8dd6-71a14cebcefb"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <script type="text/javascript" async
-                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-                            <div data-iframe-width="150" data-iframe-height="350"
-                                data-share-badge-id="95cc6da0-6b17-45e2-8d91-18709b3b2598"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <script type="text/javascript" async
-                                src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-                        </div>
-                    </div>
-                </details>
-
-                <nav>
-                    <ul class="soft-shadow">
-                        <li>
-                            <a title="Resume" href="resume.html" target="_blank" class="icon fa-file-text-o"
-                                onclick="gaEvent('Resume');">
-                                <span class="label">Resume</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a title="Github" href="https://github.com/lonesome-data?tab=repositories" target="_blank"
-                                class="icon fa-github" onclick="gaEvent('Github');">
-                                <span class="label">Github</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a title="LinkedIn" href="https://www.linkedin.com/in/smforester/" target="_blank"
-                                class="icon fa-linkedin" onclick="gaEvent('LinkedIn');">
-                                <span class="label">LinkedIn</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a title="Email" href="mailto:19rwe14+github+page@gmail.com?Subject=Hey%20there!"
-                                target="_blank" class="icon fa-envelope-o" onclick="gaEvent('Email');">
-                                <span class="label">Email</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </header>
-
-            <div id="footer">
-                <span class="copyright">&copy; <span id="year"></span> Sean Forester. All Rights Reserved.</span>
-                <script type="text/javascript">
-                    document.getElementById("year").innerText = new Date().getFullYear();
-                </script>
-                <script type="text/javascript" src="./assets/js/main.js"></script>
-                <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const ctx = document.getElementById('aptitudeChart').getContext('2d');
-
-                        const profileData = {
-                            "Ideaphoria": 15,
-                            "Graphoria": 25,
-                            "Observation": 45,
-                            "Inductive Reasoning": 50,
-                            "Memory for Design": 55,
-                            "Rhythm Memory": 60,
-                            "Structural Visualization": 60,
-                            "Pitch Discrimination": 65,
-                            "Silograms": 65,
-                            "Analytical Reasoning": 70,
-                            "Foresight": 80,
-                            "Number Memory": 85
-                        };
-
-                        new Chart(ctx, {
-                            type: 'radar',
-                            data: {
-                                labels: Object.entries(profileData).map(([name, value]) => [name, `${value}%`]),
-                                datasets: [{
-                                    label: 'Cognitive Profile',
-                                    data: Object.values(profileData),
-                                    backgroundColor: 'rgba(99, 102, 241, 0.2)',
-                                    borderColor: '#6366f1',
-                                    pointBackgroundColor: '#22d3ee',
-                                    pointBorderColor: '#fff',
-                                    borderWidth: 2
-                                }]
-                            },
-                            options: {
-                                scales: {
-                                    r: {
-                                        angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
-                                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
-                                        pointLabels: {
-                                            color: '#9ca3af',
-                                            font: { family: "'Inter', sans-serif", size: 11 },
-                                            centerPointLabels: true,
-                                            textAlign: 'center'
-                                        },
-                                        ticks: { display: false, stepSize: 20 },
-                                        suggestedMin: 0,
-                                        suggestedMax: 100
-                                    }
-                                },
-                                plugins: {
-                                    legend: { display: false }
-                                },
-                                responsive: true,
-                                maintainAspectRatio: false
-                            }
-                        });
-                    });
-                </script>
+            <div class="card">
+                <h3>Data Science — U.S. Marine Corps</h3>
+                <p class="context">Principal data science consultant advising commands across western U.S.</p>
+                <p class="result"><strong>9%</strong> improvement in ground equipment readiness. Built TensorFlow NLP classifier that uncovered systemic bias in auditing practices, driving enterprise-wide methodology changes.</p>
             </div>
 
         </div>
-    </div>
-</body>
+    </section>
 
+    <!-- Certifications -->
+    <section>
+        <h2>Certifications</h2>
+        <div class="certs-grid">
+            <span class="cert">Databricks Certified Data Engineer Associate <span class="year">2026</span></span>
+            <span class="cert">GCP Professional Machine Learning Engineer <span class="year">2024</span></span>
+            <span class="cert expired">AWS Machine Learning — Specialty <span class="year">expired</span></span>
+            <span class="cert expired">AWS Solutions Architect — Associate <span class="year">expired</span></span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/seanforester/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/lonesome-data" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:sean.forester99@gmail.com">sean.forester99@gmail.com</a>
+        </div>
+    </footer>
+
+</div>
+
+</body>
 </html>
